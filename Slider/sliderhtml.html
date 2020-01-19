@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        /*internal style sheet*/
+        .circle {width:100px; height:100px; border-radius: 50%; background:red;}
+        .move-left{transform: translateX(0); transition: transform 1s linear;}
+        .move-middle {
+            transform: translateX(50%);
+            transition: transform 1s linear;
+        }
+        .move-right {
+            transform: translateX(90%);
+            transition: transform 1s linear;
+        }
+    </style>
+</head>
+<body>
+    <form name="mainForm">
+        <p> In general do you agree? </p>
+        <input type="radio" name="rads" value="agree" /><label>Agree</label>
+        <input type="radio" name="rads" value="maybe" /><label>Maybe</label>
+        <input type="radio" name="rads" value="disagree" /><label>Disagree</label>
+    </form>
+    <div id="axis">
+        <div class="circle move-right"></div>
+    </div>
+    <p id="result"></p>
+    <script>
+        // internal js doc
+        var form = document.mainForm;
+        form.onclick = function () {
+            var radsVal = form.rads.value; //list node ref
+            var parentElem = document.getElementById("axis");
+            if (radsVal == "agree") {
+                result.textContent = "It looks like you like front end dev";
+                parentElem.classList.add("move-right");
+                parentElem.classList.remove("move-middle");
+                parentElem.classList.remove("move-left");
+            } else if (radsVal == "maybe") {
+                result.textContent = "maybe you like front end dev";
+                parentElem.classList.add("move-middle");
+                parentElem.classList.remove("move-right");
+                parentElem.classList.remove("move-left");
+            } else {
+                result.textContent = "maybe you like backend dev";
+                parentElem.classList.add("move-left");
+                parentElem.classList.remove("move-middle");
+                parentElem.classList.remove("move-right");
+            }
+        }
+    </script>
+</body>
+</html>

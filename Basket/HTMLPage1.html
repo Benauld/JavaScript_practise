@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width", initial-scale="1.0" />
+    <title>Basket Project</title>
+    <link rel="stylesheet" href="StyleSheet1.css" />
+</head>
+<body>
+   <h3>basket</h3>
+   <div class="row">
+       <div class="columns">
+           <span class="products">&#8857;</span>
+           <h5>Round widget</h5>
+           <p>this appealing product.....</p>
+           <a id="add-round-widget" href="#"> Add to basket</a>
+       </div>
+       <div class="columns">
+           <span class="products">&#9632;</span>
+           <h5>Square widget</h5>
+           <p>this appealing product.....</p>
+           <a id="add-square-widget" href="#"> Add to basket</a>
+       </div>
+       <div class="columns">
+           <span class="products">&#9660;</span>
+           <h5>Triangle widget</h5>
+           <p>this appealing product.....</p>
+           <a id="add-triangle-widget" href="#"> Add to basket</a>
+       </div>
+   </div>
+    <h4>Basket</h4>
+    <table role="grid">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Shipping</th>
+                <th>SubTotal</th>
+            </tr>
+        </thead> 
+        <tbody id="basket-products">
+
+
+        </tbody>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>Total</td>
+                <td>&pound;<span id="basket-total"></span></td>
+
+            </tr>
+        </tbody>
+    </table>
+<script src="Script1.js"></script>
+</body>
+</html>

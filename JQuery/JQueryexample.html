@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #map{height: 200px; width:100%; background:lightblue;}
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $("document").ready(function () {
+            // statements go here
+            $("body").append("<p>jquery has loaded</p>");
+            $("p:first").css("text-decoration", "line-through");
+            $("p:nth-child(2)").css("color", "hotpink");
+            $(".selectors").css("text-shadow", "3px 3px 3px #ccc");
+            $("h2:not(.selectors)").css("background", "lightblue");
+            $("#intro").css("border-bottom", "1px dotted yellow");
+            // append in HTML
+            $("#appendButton").click(function () {
+                //$("#appendHere").append("<span>appended text</span>"); //places after
+                //$("#appendHere").prepend("<span>prepended text</span>");//places before
+                $("#appendHere").html("<span>replaces text in HTML</span>");//places before
+            }); //click event
+            $("#map").on("mousemove", onMouseOver); // no brackets on onMouseOver function
+            $("#map").on("click", onMouseClick); // no brackets on onMouseOver function
+            $("#map").on("mouseleave", onMouseLeave); // no brackets on onMouseOver function
+
+        }); // end of ready method
+                // ready method ensures document fully loaded before
+        function onMouseOver(evt){
+            $('#map').text(evt.type + ": " + evt.pageX + ", " + evt.pageY + "\n" + "button: " + evt.which + "key: " + evt.metaKey);
+        }
+        function onMouseClick(evt){
+            $('#map').text(evt.type + ": " + evt.pageX + ", " + evt.pageY);
+        }
+        function onMouseLeave(evt){
+            $('#map').text("You've left the area");
+        }
+    </script>
+</head >
+<body>
+    <p>first p</p>
+    <p class="selectors">p Selectors</p>
+    <h2 class="selectors">h2 Selectors</h2>
+    <h1 id="intro">h1 Intro</h1>
+    <h2>h2 heading</h2>
+    <p id="appendHere">...</p>
+    <button id="appendButton" type="button">Append to p</button>
+
+    <!--//Map Exercise-->
+    <div id="map"></div>
+
+</body>
+</html>

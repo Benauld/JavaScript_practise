@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        aside{width:30; background: lightgrey; border: 1px solid darkblue;}
+        aside p{cursor: pointer;}
+        #ulList{display:none;}
+    </style>
+   
+</head>
+
+<body>
+    <h1 id="greetToday">Hello</h1>
+    <p>paragraph1</p>
+    <p>paragraph2</p>
+
+    <aside>
+        <p onclick="toggle(this)">show</p>
+        <ul id="ulList">
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+        </ul>
+    </aside>
+  
+    <div> 
+        <h3>do while validation</h3>
+        <input oninput="starIt(this)" type="text" id="validate"/>
+        <button onclick="validateThis()">Validate Field</button>
+        <p id="error"></p>
+    </div>
+
+<small>
+   <span>&copy;</span><time onclick="clickMe(this, 1979)" id="placeYear"></time>
+</small>
+
+    <script src="Script1.js"></script>
+</body>
+</html>
+

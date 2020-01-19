@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General JS theory</title>
+    <style>
+        a{color: hotpink;}
+        a:hover{color:lightblue;}
+        a:active{color: red;}
+        .moreStyles{color: orange; background: grey; text-decoration:line-through;}
+        aside{width:30%; background:lightgrey; border: 1px solid darkblue;}
+        aside p{cursor:pointer;}
+        #ulList{display:none;}
+    </style>
+</head>
+
+<body>
+    <h1 id='greetToday'></h1>
+    <p>paragraph1</p>
+    <p>paragraph2</p>
+    <p>another p</p>
+    <a href='#'>link</a>
+    
+    <aside>
+        <p id='toggle' onclick='toggle(this)'>show</p>
+        <ul id='ulList'>
+            <li>List item</li>
+            <li>List item</li>
+            <li>List item</li>
+        </ul>
+    </aside>
+    <small>
+        <span>&copy;</span><time onclick='clickedMe(this, 1979)' id='placeYear'></time>
+    </small>
+    <script src="code.js"></script>
+</body>
+</html>

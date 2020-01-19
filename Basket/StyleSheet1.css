@@ -1,0 +1,32 @@
+﻿.columns a{
+    padding: 8px 30px;
+    background: lightblue;
+    text-decoration:none;
+    color:#fff;
+}
+.row{
+    display:flex;
+    display: -webkit-flex;
+    display: -ms-flexbox
+}
+.columns{
+    flex: 1 1 0;
+    -webkit-flex: 1 1 0;
+    -ms-flex: 1 1 100px;
+}
+.products{
+    color: lightblue;
+    font-size: 28px;
+    }
+
+.column:nth-child(2) > .products {
+    color: hotpink;
+}
+table{
+    width:100%;
+    border: 1px solid #ccc;
+}
+th{
+    background:lightgrey;
+    padding:5px 20px;
+}
